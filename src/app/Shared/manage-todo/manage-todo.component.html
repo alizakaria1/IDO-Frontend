@@ -1,0 +1,60 @@
+<div class="form">
+    <mat-card>
+        <div class="grid-item">
+            <mat-card-content>
+                <mat-form-field>
+                    <input matInput type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="title" placeholder="title">
+                </mat-form-field>
+            </mat-card-content>
+
+            <mat-card-content>
+                <mat-form-field>
+                    <input matInput type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="category" placeholder="category">
+                </mat-form-field>
+            </mat-card-content>
+
+            <mat-card-content>
+                <mat-form-field>
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker" [(ngModel)]="date" [ngModelOptions]="{standalone: true}">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </mat-card-content>
+        </div>
+
+        <div class="grid-item">
+            <mat-card-content>
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <mat-form-field fxFlex="50">
+                        <input matInput type="number" placeholder="estimated time" [ngModelOptions]="{standalone: true}" [(ngModel)]="number">
+                    </mat-form-field>
+
+                    <mat-form-field fxFlex="70">
+                        <mat-label>Time Frame</mat-label>
+                        <mat-select [(ngModel)]="frame" [ngModelOptions]="{standalone: true}">
+                            <mat-option *ngFor="let time of timeFrame" [value]="time">
+                                {{ time }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+
+            <mat-card-content>
+                <mat-form-field>
+                    <mat-label>Importance</mat-label>
+                    <mat-select [(ngModel)]="urgency" [ngModelOptions]="{standalone: true}">
+                        <mat-option *ngFor="let imp of importance" [value]="imp">
+                            {{ imp }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-card-content>
+        </div>
+
+        <mat-card-content>
+            <button (click)="onSubmit()" mat-raised-button color="primary">Create Todo</button>
+        </mat-card-content>
+    </mat-card>
+</div>

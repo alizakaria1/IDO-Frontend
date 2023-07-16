@@ -1,0 +1,143 @@
+body {
+    padding: 0;
+    margin: 0
+}
+
+.main {
+    width: 1920px;
+    height: 1080px;
+    display: grid;
+    grid-template-columns: 1fr 1fr
+}
+
+.left {
+    border: 1px solid black;
+    background-color: #212121;
+}
+
+.right {
+    background-image: linear-gradient(#8556A4, #2D2B52);
+    position: relative;
+    border: 1px solid #707070;
+}
+
+.right p {
+    color: #FFFFFF;
+    font: normal normal 100 72px/81px HelveticaNeue;
+    position: absolute;
+    top: 252px;
+    left: 250px;
+    margin: 0;
+}
+
+input {
+    width: 564px;
+    height: 38px;
+    position: absolute;
+    background-color: #222222;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+}
+
+.Email-label {
+    font: normal normal 300 16px/24px HelveticaNeue;
+    color: #FFFFFF;
+    position: absolute;
+    top: 374px;
+    left: 263px;
+}
+
+#Email {
+    top: 400px;
+    left: 263px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    opacity: 0;
+    font: normal normal 300 16px/24px HelveticaNeue;
+    color: #ffffff;
+    padding-left: 13px;
+    transition: opacity 0.5s ease;
+}
+
+input:focus::placeholder {
+    opacity: 1;
+}
+
+#Password {
+    top: 495px;
+    left: 263px;
+}
+
+.password-label {
+    font: normal normal 300 16px/24px HelveticaNeue;
+    color: #FFFFFF;
+    position: absolute;
+    top: 469px;
+    left: 263px;
+}
+
+.right button {
+    width: 575px;
+    height: 38px;
+    background-color: #B6A3C2;
+    border-radius: 20px;
+    position: absolute;
+    top: 577px;
+    left: 263px;
+    color: #403564;
+    border: 0;
+    font: normal normal bold 18px/22px HelveticaNeue;
+    cursor: pointer;
+}
+
+.left {
+    position: relative;
+}
+
+.man {
+    width: 545px;
+    height: 435px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.woman {
+    width: 201px;
+    height: 402px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.logo {
+    width: 548px;
+    height: 333px;
+    position: absolute;
+    top: 250px;
+    left: 200px;
+}
+
+.email-validation {
+    color: #DC3545;
+    position: absolute;
+    top: 444px;
+    left: 263px;
+    font: normal normal bold 14px/21px HelveticaNeue;
+}
+
+.exception-message {
+    color: #DC3545;
+    position: absolute;
+    top: 539px;
+    left: 263px;
+    font: normal normal bold 14px/21px HelveticaNeue;
+}

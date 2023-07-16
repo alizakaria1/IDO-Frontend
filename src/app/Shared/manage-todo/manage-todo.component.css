@@ -1,0 +1,16 @@
+.form {
+    width: 500px;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+}
+
+mat-card {
+    margin: 20px;
+    padding: 20px;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}

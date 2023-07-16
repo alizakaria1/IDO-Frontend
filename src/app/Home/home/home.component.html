@@ -1,0 +1,21 @@
+<div class="main">
+    <div class="left">
+        <img class="man" src="../../../assets/Images/Man.svg">
+        <img class="woman" src="../../../assets/Images/Woman.svg">
+        <img class="logo" src="../../../assets/Images/Logo@2x.png">
+    </div>
+    <div class="right">
+        <p>Time to Work!</p>
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+            <label for="Email" class="Email-label">Email</label> <br/>
+            <input formControlName="email" type="text" id="Email" placeholder="user@example.com" />
+            <div class="email-validation" *ngIf="myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)">
+                Invalid email
+            </div>
+            <label for="Password" class="password-label">Password</label> <br/>
+            <input formControlName="password" type="password" id="Password" placeholder="************" />
+            <div class="exception-message">{{exceptionMessage}}</div>
+            <button type="submit" [disabled]="myForm.invalid">SIGN IN</button>
+        </form>
+    </div>
+</div>

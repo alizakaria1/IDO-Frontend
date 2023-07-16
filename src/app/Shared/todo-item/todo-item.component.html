@@ -1,0 +1,28 @@
+<div class="grid" cdkDropListGroup>
+    <div class="grid-item" *ngFor="let status of statuses" cdkDropList [cdkDropListData]="[status]" (cdkDropListDropped)="drop($event)">
+        <div class="status">
+            <p>{{status.StatusName}}</p>
+        </div>
+
+        <div class="todo" *ngFor="let todo of status.ToDos, let i = index" [cdkDragData]="todo" cdkDrag>
+            <p>{{todo.Title}}</p>
+            <div class="list-container">
+                <ul class="list key-list">
+                    <li>Category</li>
+                    <li>Due Date</li>
+                    <li>Estimate</li>
+                    <li>Importance</li>
+                </ul>
+                <ul class="list value-list">
+                    <li>{{todo.Category}}</li>
+                    <li>{{todo.DueDate}}</li>
+                    <li>{{todo.EstimatedTime}} {{todo.TimeFrame}}</li>
+                    <li [ngStyle]="{ 'background-color': todo.Importance === 'High' ? '#DC3545' : todo.Importance === 'Medium' ? '#FE913E' : '#39AC95' }">{{todo.Importance}}</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

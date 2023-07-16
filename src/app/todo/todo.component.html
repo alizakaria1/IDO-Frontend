@@ -1,0 +1,8 @@
+<div class="container">
+    <app-navbar></app-navbar>
+    <app-banner></app-banner>
+    <div *ngIf="common.showForm">
+        <app-manage-todo></app-manage-todo>
+    </div>
+    <app-todo-item></app-todo-item>
+</div>

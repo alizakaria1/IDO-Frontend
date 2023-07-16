@@ -1,0 +1,148 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 1920px;
+    height: 1526px;
+    position: relative;
+    /* grid-gap: 30px; */
+    margin-top: 32px;
+}
+
+.grid-item {
+    position: absolute;
+    left: 34px;
+    position: relative;
+}
+
+.status {
+    border-radius: 5px;
+    background-color: #212529;
+    margin-bottom: 10px;
+    width: 422px;
+    height: 48px;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.status p {
+    padding: 0;
+    margin-top: 0;
+    width: 50px;
+    height: 21px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 14px;
+    left: 56px
+}
+
+.todo {
+    border: 1px solid #212529;
+    width: 418px;
+    height: 213px;
+    margin-bottom: 20px;
+    background-color: #212529;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.todo p {
+    color: #FFFFFF;
+    font: normal normal medium 16px/24px HelveticaNeue;
+    margin-left: 14px;
+    /*   border : 1px solid white; */
+    width: 368px;
+    height: 44px;
+    margin-bottom: 0;
+}
+
+.todo input {
+    color: black;
+    font: normal normal medium 16px/24px HelveticaNeue;
+    margin-left: 14px;
+    /*   border : 1px solid white; */
+    width: 200px;
+    height: 30px;
+    margin-bottom: 0;
+    border-radius: 10px;
+    background-color: grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.list-container {
+    margin-top: 0;
+    display: flex;
+    gap: 56px;
+}
+
+.list {
+    color: #FFFFFF;
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+}
+
+.key-list {
+    width: 61px;
+    height: 125px;
+    margin-left: 14px;
+}
+
+.key-list li {
+    /*   width: 45px;
+  height: 14px; */
+    font: normal normal 100 12px/18px HelveticaNeue;
+    color: #6C757D;
+    letter-spacing: 0px;
+    margin-bottom: 18px;
+}
+
+.value-list {
+    width: 82px;
+    height: 140px;
+    font: normal normal 300 14px/21px HelveticaNeue;
+}
+
+.value-list li {
+    white-space: nowrap;
+    margin-bottom: 14px;
+}
+
+.value-list li:last-child {
+    width: 46px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.container {
+    width: 418px;
+    height: 215px;
+    background-color: #212529;
+    border-radius: 10px;
+}
+
+.title input {
+    width: 200px;
+    height: 30px;
+    background-color: grey;
+    color: white;
+    margin-top: 10px;
+    margin-left: 14px;
+    border: none;
+    border-radius: 10px;
+}
+
+.category {
+    position: relative;
+}
+
+.category span {
+    color: #6C757D;
+    position: absolute;
+    top: 15px;
+    font: normal normal 100 12px/18px HelveticaNeue;
+}
